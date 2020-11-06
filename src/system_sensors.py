@@ -146,7 +146,7 @@ def get_temp():
     return temp
 
 def get_disk_usage(path):
-    return str(psutil.disk_usage(path).free)
+    return str(round(psutil.disk_usage(path).free / 1024 / 1024,2))
 
 
 def get_memory_usage():
